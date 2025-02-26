@@ -7,7 +7,7 @@ app.use(bodyParser.json())
 app.use(cors())
 
 const db = mysql.createConnection({
-    user: "root",
+    user: "sabpat702",
     host: "127.0.0.1",
     password: "",
     database: "fogado",

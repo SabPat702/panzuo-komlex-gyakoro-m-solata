@@ -1,5 +1,7 @@
 body{
   color: #293647;
+  max-width: 1000px;
+  margin: auto;
 }
 
 .bg-fej {
@@ -27,6 +29,7 @@ body{
 }
 
 .bg-torzs {
+  background-color: #C5C599;
   align-content: center;
 }
 
