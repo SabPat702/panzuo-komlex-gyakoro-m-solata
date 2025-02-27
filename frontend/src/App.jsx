@@ -3,7 +3,7 @@ import './App.css'
 import { Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'tachyons/css/tachyons.min.css'
-import { Home } from './components/pages/Home'
+import { Home } from './Home'
 
 function App() {
   

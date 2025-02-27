@@ -1,4 +1,9 @@
 import {React} from 'react'
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import './App.css';
+
 export const Home = () => {
 
 
@@ -10,8 +15,11 @@ return(
             </div>
         </div>
         <div>
+        <Container>
             <div>
-                    <div>
+                <Row>
+                <Col>
+                    <div className="col-lg-4 col-md-4  col-sm-4 bg-torzs">
                         <h3>Napraforgós Nemzeti Tanúsító Védjegy célja</h3>
                         <br />
                         <p>
@@ -22,7 +30,9 @@ return(
                         <br />
                         <img src="holloko_masolata.jpg" alt="Hollókő másolata" />
                     </div>
-                    <div>
+                </Col>
+                <Col>
+                    <div className="col-lg-4 col-md-4  col-sm-4">
                         <h3>Falusi szálláshely fajtái</h3>
                         <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből, és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>
                         <li>Lakrész: önálló épület kettő, illetve több szobából álló lehatárolt része a minősítéstől függően hozzátartozó mellékhelyiségekkel együtt</li>
@@ -30,13 +40,18 @@ return(
                         <li>Sátorozóhely: csak valamelyik falusi szálláshely típus mellett, mintegy azt kiegészítve üzemeltethető az előírt feltételek megléte esetén. Pl.: falusi vendégház sátorozóhellyel.</li>
                         <img src="ketagyas.jpg" alt="Kétágyas szoba" />
                     </div>
-                    <div>
+                </Col>
+                <Col>
+                    <div className="col-lg-4 col-md-4 col-sm-4 bg-torzs">
                     <h3>A hét törpe fogadó</h3>
                     <li>Ruhásszekrény</li>
                     <li>Saját fürdőszoba zuhanytálca</li>
                     <li>WC (fürdőszobával egyben)</li>
                     </div>
+                </Col>
+                </Row>
             </div>
+        </Container>
         </div>
         <div>
                 <div>
