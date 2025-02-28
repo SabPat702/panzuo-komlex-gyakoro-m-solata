@@ -39,7 +39,7 @@ app.get("/szobakKihasznaltsaga", (req, res) => {
 
 app.get("/valasztottSzoba/:id", (req, res) => {
     const query = "Select vendegek.vnev, foglalasok.erk, foglalasok.tav from szobak inner join foglalasok on foglalasok.szoba = szobak.szazon inner join vendegek on vendegek.vsorsz = foglalasok.vendeg where szobak.szazon = ?";
-    db.query(query, [reg.params.id], (err, result) => {
+    db.query(query, [req.params.id], (err, result) => {
         if (err) return res.json(err)
         return res.json(result)
     })
