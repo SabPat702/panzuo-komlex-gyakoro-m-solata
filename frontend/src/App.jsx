@@ -4,6 +4,7 @@ import { Routes, Route} from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'tachyons/css/tachyons.min.css'
 import { Home } from './Home'
+import { SzobakFoglaltsaga } from './SzobakFolglaltsaga'
 
 function App() {
   
@@ -12,6 +13,7 @@ function App() {
   <>
       <Routes>
         <Route path='/' element={<Home />} />
+        <Route path='/szobakFoglaltsaga' element={<SzobakFoglaltsaga />} />
       </Routes>
   </>
   )

@@ -4,9 +4,7 @@ import {Container} from 'react-bootstrap'
 import {Row} from 'react-bootstrap'
 import {Col} from 'react-bootstrap'
 import Szobak from './tables/Szobak.jsx'
-import Valasztott from './tables/Valasztott.jsx'
-import SzobakKihasznaltsaga from './tables/SzobakKihasznaltsaga.jsx'
-export const Home = () => {
+export const SzobakFoglaltsaga = () => {
 
 
 return(
@@ -16,24 +14,10 @@ return(
                 <img src="top.jpg" alt="Táj kép" />
             </div>
         </div>
-        <Container fluid>
         <div>
+        <Container fluid>
             <Row>
-                    <Col md={4} sm={12}>
-                    <div className="bg-torzs">
-                        <h3>Napraforgós Nemzeti Tanúsító Védjegy célja</h3>
-                        <br />
-                        <p>
-                            A falusi szálláshelyek napraforgós Nemzeti Tanúsító Védjegye a FATOSZ által több mint tíz éve létrehozott, és működtetett minősítési rendszer alapjaira épülve 2011 óta a minőségi falusi turizmus szimbóluma. A védjegy alapvető célja, hogy – összhangban az egyes szálláshelyek működtetéséről szóló 239/2009. Korm. rendeletben foglaltakkal – garanciát nyújtson a szálláshely szolgáltatás minőségének megfelelő színvonalára.  A falusi vendégházak 1-4 napraforgós besorolást nyerhetnek el a külső, belső megjelenés, a felszereltség, a szolgáltatások színvonala, valamint a szállásadó személyes felkészültségének, szakmai képzettségének függvényében. 
-                        </p>
-                        <a href="https://falusiturizmus.eu/">Tájékoztató oldal</a>
-                        <br />
-                        <img src="logo.png" alt="A falusi túrizmus logója" />
-                        <br />
-                        <img src="holloko_masolata.jpg" alt="Hollókő másolata" />
-                    </div>
-                    </Col>
-                    <Col md={4} sm={12}>
+                    <Col md={6} sm={12}>
                     <div>
                         <h3>Falusi szálláshely fajtái</h3>
                         <li>Vendégszoba: a vendégek rendelkezésére bocsátható önálló lakóegység, amely egy lakóhelyiségből, és a minősítéstől függően a hozzátartozó mellékhelyiségekből áll.</li>
@@ -43,7 +27,7 @@ return(
                         <img src="ketagyas.jpg" alt="Kétágyas szoba" />
                     </div>
                     </Col>
-                    <Col md={4} sm={12}>
+                    <Col md={6} sm={12}>
                     <div className="bg-torzs">
                         <h3>A hét törpe fogadó</h3>
                         <Szobak />
@@ -55,26 +39,15 @@ return(
                     </div>
                     </Col>
             </Row>
+        </Container>
         </div>
         <div>
-            <Row>
                 <div>
-                    <Col md={6} sm={12}>
                     <div>
                         <h3>A vendégszobák foglalatsága</h3>
-                        <Valasztott />
                     </div>
-                    </Col>
-                    <Col md={6} sm={12}>
-                    <div>
-                        <h3>A szobák kihasználtsága:</h3>
-                        <SzobakKihasznaltsaga />
-                    </div>
-                    </Col>
                 </div>
-            </Row>
         </div>
-        </Container>
     </>
     )
 }

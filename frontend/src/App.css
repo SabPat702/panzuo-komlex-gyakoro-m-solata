@@ -61,7 +61,7 @@ table tr{
 }
 
 table tbody tr:nth-child(odd){
-  background-color: #acac85;
+  background-color: rgb(130, 130, 130, 0.2);
 }
 
 table{

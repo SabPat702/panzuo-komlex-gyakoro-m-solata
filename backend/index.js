@@ -21,8 +21,16 @@ app.get("/szobak", (req, res) => {
     })
 })
 
+app.get("/szobakNeve", (req, res) => {
+    const query = "Select szazon, sznev from szobak";
+    db.query(query, (err, result) => {
+        if (err) return res.json(err)
+        return res.json(result)
+    })
+})
+
 app.get("/szobakKihasznaltsaga", (req, res) => {
-    const query = "Select szobak.sznev, Sum(foglalasok.fo), Sum((foglalasok.tav-foglalasok.erk)*foglalasok.fo) from szobak inner join foglalasok on foglalasok.szoba = szobak.szazon Group by szobak.sznev";
+    const query = "Select szobak.sznev, Sum(foglalasok.fo) As fo, Sum((foglalasok.tav-foglalasok.erk)*foglalasok.fo) As este from szobak inner join foglalasok on foglalasok.szoba = szobak.szazon Group by szobak.sznev";
     db.query(query, (err, result) => {
         if (err) return res.json(err)
         return res.json(result)
